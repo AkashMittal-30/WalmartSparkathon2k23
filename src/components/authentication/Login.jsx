@@ -1,31 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-// import { useUserAuth } from "../../context/UserAuthContext";
+import { useUserAuth } from "../../context/UserAuthContext";
 
-const Signup = () => {
+const Login = () => {
+  console.log("login");
   const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
   const [password, setPassword] = useState("");
-  // const { signUp } = useUserAuth();
-  let navigate = useNavigate();
+  const [error, setError] = useState("");
+  const { logIn } = useUserAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      // await signUp(email, password);
+      await logIn(email, password);
       navigate("/");
     } catch (err) {
       setError(err.message);
     }
   };
-
+  
   return (
     <div className="auth-body">
       <div className="p-4 box bg-white br-top">
-        <h2 className="mb-3">Sign Up</h2>
+        <h2 className="mb-3">Login</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -46,16 +47,16 @@ const Signup = () => {
 
           <div className="d-grid gap-2">
             <Button variant="primary" type="Submit">
-              Sign up
+              Log In
             </Button>
           </div>
         </Form>
       </div>
       <div className="p-4 text-center bg-white br-bottom">
-        Already have an account? <Link to="/login">Login</Link>
+        Don't have an account? <Link to="/signup">Sign Up</Link>
       </div>
     </div>
   );
 };
 
-export default Signup;
+export default Login;

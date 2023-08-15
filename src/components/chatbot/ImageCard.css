@@ -1,0 +1,106 @@
+.image-card-container {
+  width: 80%;
+  display: flex;
+  overflow-x: auto;
+  margin-bottom: 6px;
+}
+.message-container {
+  position: relative;
+}
+.image-card-container::-webkit-scrollbar {
+  height: 6px;
+}
+.image-card-container::-webkit-scrollbar-track {
+  background: rgba(131, 201, 255, 0.358);
+}
+.image-card-container::-webkit-scrollbar-thumb {
+  background: rgb(0, 115, 222);
+  border-radius: 8px;
+}
+.image-card-container::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 74, 143);
+}
+.image-card-container::-webkit-resizer {
+  background-size: 0;
+  background: rgba(131, 201, 255, 0.358);
+}
+.image-card-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  margin-bottom: 8px;
+}
+.image-card {
+  margin: 0 10px 5px 0;
+  background-color: rgba(114, 187, 255, 0.66);
+  border-radius: 6px;
+  color: black;
+  padding: 10px;
+}
+.image-card-checkbox {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  transform: scale(1.2);
+}
+.analysis-buttons .action-button {
+  background-color: rgba(114, 187, 255, 0.66);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.analysis-buttons .action-button:hover {
+  background-color: rgb(0, 93, 180);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+.selected {
+  background-color: rgb(0, 93, 180) !important;
+  color: white;
+}
+.image-card-title {
+  font-size: 20px;
+}
+.image-card-price {
+  font-size: 12px;
+}
+.chat-message-text {
+  width: 80%;
+  word-wrap: break-word !important;
+  padding: 20px 10px;
+}
+.right-align {
+  text-align: right;
+  margin-left: 20%;
+}
+.display-none {
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+.bg-d {
+  background-color: rgba(147, 203, 255, 0.484);
+  /* border-radius: 5px; */
+}
+.bg-l {
+  /* border-radius: 5px; */
+}
+@media screen and (max-width: 600px) {
+  .image-card-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .image-card-title {
+    font-size: 16px;
+  }
+  .image-card-price {
+    font-size: 10px;
+  }
+}

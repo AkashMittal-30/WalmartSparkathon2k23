@@ -2,41 +2,31 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-// import GoogleButton from "react-google-button";
-// import { useUserAuth } from "../../context/UserAuthContext";
+import { useUserAuth } from "../../context/UserAuthContext";
 
-const Login = () => {
+const Signup = () => {
+  console.log("signup");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  // const { logIn, googleSignIn } = useUserAuth();
-  const navigate = useNavigate();
+  const [password, setPassword] = useState("");
+  const { signUp } = useUserAuth();
+  let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // setError("");
-    // try {
-    //   await logIn(email, password);
-    //   navigate("/");
-    // } catch (err) {
-    //   setError(err.message);
-    // }
-  };
-
-  const handleGoogleSignIn = async (e) => {
-    e.preventDefault();
+    setError("");
     try {
-      // await googleSignIn();
+      await signUp(email, password);
       navigate("/");
-    } catch (error) {
-      console.log(error.message);
+    } catch (err) {
+      setError(err.message);
     }
   };
 
   return (
     <div className="auth-body">
       <div className="p-4 box bg-white br-top">
-        <h2 className="mb-3">Login</h2>
+        <h2 className="mb-3">Sign Up</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -57,16 +47,16 @@ const Login = () => {
 
           <div className="d-grid gap-2">
             <Button variant="primary" type="Submit">
-              Log In
+              Sign up
             </Button>
           </div>
         </Form>
       </div>
       <div className="p-4 text-center bg-white br-bottom">
-        Don't have an account? <Link to="/signup">Sign Up</Link>
+        Already have an account? <Link to="/login">Login</Link>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Signup;
