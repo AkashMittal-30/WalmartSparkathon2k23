@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from uuid import UUID, uuid4
-from .models import User, Chat, Product
+from app.models import User, Chat, Product
 
 app = FastAPI()
 
