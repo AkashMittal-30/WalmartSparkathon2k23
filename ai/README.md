@@ -155,6 +155,53 @@ Remember to consider her preferences and interests while selecting the gift. Whe
 <details>
     <summary><code>POST</code> <code><b>/search</b></code> <code>(search a product by its name)</code></summary>
 
+##### Parameters
+
+> | name            |  type      | data type      | description                                          |
+> |-----------------|------------|----------------|------------------------------------------------------|
+> | `productName`   |  required  | string         | name of the product to search                        |
+
+
+##### Responses
+
+> | http code     | content-type                      | response                                                            |
+> |---------------|-----------------------------------|---------------------------------------------------------------------|
+> | `200`         | `application/json`                | list of (max 10) items details for the input product                |
+> | `400`         | `application/json`                | `{"code": "400","message": "Bad Request"}`                          |
+> | `500`         | `application/json`                | `{"code": "500","message": "Internal Server Error"}`                |
+> | `503`         | `application/json`                | `{"code": "503","message": "Service Unavailable"}`                  |
+
+##### Example cURL
+
+```javascript
+curl -X POST \
+    -H "Content-Type: application/json" \
+    -d '{
+        "productName": "Barbie Dolls" 
+    }' \
+    http://localhost:8000/search
+```
+
+##### Example response json
+
+```json
+{
+    "productItems": [
+        {
+            "id": "1XWYB8MIUJ6L",
+            "type": "Dolls",
+            "name": "Barbie Color Reveal Scented Sweet Fruit Fashion Doll with Accessories & Color Change (Styles May Vary)",
+            "brand": "Barbie",
+            "price": 12.99,
+            "currency": "USD",
+            "rating": 4.6444,
+            "imageUrl": "https://i5.walmartimages.com/seo/Barbie-Color-Reveal-Scented-Sweet-Fruit-Fashion-Doll-with-Accessories-Color-Change-Styles-May-Vary_5d1db589-2a32-4ee9-a489-d2aac9cd116f.496e326cfb827deef347709760ec0f8c.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/Barbie-Color-Reveal-Scented-Sweet-Fruit-Fashion-Doll-with-Accessories-Color-Change-Styles-May-Vary/1618685574"
+        }
+    ]
+}
+```
+
 </details>
 
 <details>
