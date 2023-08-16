@@ -1,8 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import "./ImageCard.css";
-function ImageCard({ imageLinks, message, user }) {
+function ImageCard({ items, message, user, productNames }) {
+  const [askQuestion, setAskQuestion] = useState(false);
   const [selectedIndexes, setSelectedIndexes] = useState([]);
+  
+  const handleAskQuestionToggle = () => {
+    setAskQuestion(!askQuestion);
+  };
+
   const handleCheckboxChange = (index) => {
     if (askQuestion) setAskQuestion(false);
     if (selectedIndexes.includes(index)) {
@@ -13,11 +19,11 @@ function ImageCard({ imageLinks, message, user }) {
       }
     }
   };
-  const [askQuestion, setAskQuestion] = useState(false);
-  const handleAskQuestionToggle = () => {
-    setAskQuestion(!askQuestion);
-  };
-  console.log(imageLinks);
+  // console.log(items);
+  const handleProductQuery = (productName)=>
+  {
+
+  }
   return (
     <div
       className={`message-container ${
@@ -34,18 +40,35 @@ function ImageCard({ imageLinks, message, user }) {
           style={{ whiteSpace: "pre-line" }}
         >{`${message}`}</div>
       )}
-      {imageLinks.length !== 0 ? (
+      {productNames?.length!==0?(
+        <>
+          <div className={`product-names-container ${
+            user === "application" ? "left-align" : "right-align"
+          }`}
+          style={{ whiteSpace: "pre-line" }}>
+            {productNames?.map((productName)=>(
+              <button className="product-names-button" onClick={()=>handleProductQuery(productName)}>
+                {productName}
+              </button>
+            ))}
+          </div>
+        </>
+      ):(
+        <></>
+      )}
+      {/* {console.log(items)} */}
+      {items?.length !== 0 ? (
         <>
           <div
             className={`image-card-container ${
               user === "application" ? "" : "right-align"
             }`}
           >
-            {imageLinks?.map((link, index) => (
+            {items?.map((item, index) => (
               <>
                 <a
                   key={index}
-                  href={link}
+                  href={item.redirectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="image-card"
@@ -61,12 +84,12 @@ function ImageCard({ imageLinks, message, user }) {
                     }
                   />
                   <img
-                    src={link}
+                    src={item.imageLink}
                     alt={`${index + 1}`}
                     className="image-card-image"
                   />
-                  <div className="image-card-title">Title</div>
-                  <div className="image-card-price">Price: ₹1000</div>
+                  <div className="image-card-title">{item.title}</div>
+                  <div className="image-card-price">Price: {item.price}</div>
                 </a>
               </>
             ))}

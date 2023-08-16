@@ -1,7 +1,8 @@
 import "./App.css";
 import Login from "./components/authentication/Login";
 import Signup from "./components/authentication/Signup";
-import Chatbot from "./components/chatbot/Chatbot";
+import ChatBotInterface from "./components/chatbot/ChatBotInterface";
+import ChatBotInterface2 from "./components/chatbot/ChatBotInterface2";
 import { Routes, Route } from "react-router-dom";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 import ProtectedRoute from "./components/authentication/ProtectedRoutes";
@@ -16,7 +17,8 @@ function App() {
           path="/"
           element={
             <ProtectedRoute>
-              <Chatbot />
+              {/* <ChatBotInterface /> */}
+              <ChatBotInterface2/>
             </ProtectedRoute>
           }
         />

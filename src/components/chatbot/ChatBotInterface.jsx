@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
-// import Container from '@mui/material/Container';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { useUserAuth } from "../../context/UserAuthContext";
@@ -15,54 +14,46 @@ import axios from "axios";
 import "./ChatBotInterface.css";
 
 const ChatBotInterface = () => {
-  const messagesContainerRef = useRef(null);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const { user, logOut, setUser } = useUserAuth(); // To Manage User Auths
+  const messagesContainerRef = useRef(null); // To Scroll to bottom when new text entered
+  const queryText = useRef(); // To store the user input
+  const [sidebarOpen, setSidebarOpen] = useState(true); // To manage sidebar status
   const [isOldChatWindow, setIsOldChatWindow] = useState(-1);
-  const queryText = useRef();
+  const [messages, setMessages] = useState([]);
+  const [messageWindows, setMessageWindows] = useState(user.messageWindows); 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
-  const { user, logOut, setUser } = useUserAuth();
-  // let imageLinks = [
-  //   "https://picsum.photos/100",
-  //   "https://picsum.photos/200",
-  //   "https://picsum.photos/300",
-  //   "https://picsum.photos/400",
-  //   "https://picsum.photos/500",
-  //   "https://picsum.photos/600",
-  //   "https://picsum.photos/700",
-  //   "https://picsum.photos/800",
-  // ];
-  // {
-  //   imageLinks: [],
-  //   message:
-  //     "Kya Raja betichod hai? Bata na bhai bata de yaar please aisa mat kar ki nhi bata raha",
-  //   user: "Raja",
-  // },
-  // {
-  //   imageLinks: imageLinks,
-  //   message: "Haa Raja betichod hai",
-  //   user: "application",
-  // },
-  // {
-  //   imageLinks: [],
-  //   message: "Kya Raja bsdwala hai?",
-  //   user: "Raja",
-  // },
-  // {
-  //   imageLinks: imageLinks,
-  //   message: "Haa Raja bsdwala hai",
-  //   user: "application",
-  // },
-  const [messages, setMessages] = useState([]);
-  const [messageWindows, setMessageWindows] = useState(user.messageWindows);
-  const handleSubmit = (e) => {
+
+  const saveNewMessageWindow =()=>{
+    const newMessageWindow = {
+      messages: messages,
+    };
+    const newMessageWindows = [newMessageWindow, ...messageWindows];
+    setMessageWindows(newMessageWindows);
+  }
+  const saveOldMessageWindow =()=>{
+    const newMessageWindow = {
+      messages: messages,
+    };
+    const newMessageWindows = messageWindows;
+    newMessageWindows[isOldChatWindow] = newMessageWindow;
+    setMessageWindows(newMessageWindows);
+  }
+
+  const submitQuery = (e) => { // To submit user
     e.preventDefault();
     if (queryText.current.value !== "") {
       const newMessage = {
-        imageLinks: [],
+        items: [{
+          imageLink: "https://picsum.photos/200",
+          redirectUrl: "https://picsum.photos/200",
+          price: "1000",
+          title: "raja bc"
+        }],
         message: queryText.current.value,
         user: user.email,
+        productNames: ["Barbie","Hannah"]
       };
       const newMessages = [...messages, newMessage];
       setMessages(newMessages);
@@ -73,10 +64,20 @@ const ChatBotInterface = () => {
         };
         const newMessageWindows = [newMessageWindow, ...messageWindows];
         setMessageWindows(newMessageWindows);
+        // saveNewMessageWindow();
         setIsOldChatWindow(0);
       }
     }
   };
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      if (!e.shiftKey) {
+        e.preventDefault();
+        submitQuery(e);
+      }
+    }
+  };
+
   const startNewChat = () => {
     if (messages.length !== 0) {
       if (isOldChatWindow > -1) {
@@ -86,12 +87,14 @@ const ChatBotInterface = () => {
         const newMessageWindows = messageWindows;
         newMessageWindows[isOldChatWindow] = newMessageWindow;
         setMessageWindows(newMessageWindows);
+        // saveOldMessageWindow();
       } else {
         const newMessageWindow = {
           messages: messages,
         };
         const newMessageWindows = [newMessageWindow, ...messageWindows];
         setMessageWindows(newMessageWindows);
+        // saveNewMessageWindow();
       }
       setIsOldChatWindow(-1);
       const newMessages = [];
@@ -107,6 +110,7 @@ const ChatBotInterface = () => {
         };
         const newMessageWindows = [newMessageWindow, ...messageWindows];
         setMessageWindows(newMessageWindows);
+        // saveNewMessageWindow();
       }
       const newMessages = messageWindows[ind].messages;
       setMessages(newMessages);
@@ -117,19 +121,13 @@ const ChatBotInterface = () => {
       const newMessageWindows = messageWindows;
       newMessageWindows[isOldChatWindow] = newMessageWindow;
       setMessageWindows(newMessageWindows);
+      // saveOldMessageWindow();
       const newMessages = messageWindows[ind].messages;
       setMessages(newMessages);
     }
     setIsOldChatWindow(ind);
   };
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      if (!e.shiftKey) {
-        e.preventDefault();
-        handleSubmit(e);
-      }
-    }
-  };
+  
   useEffect(() => {
     messagesContainerRef.current.scrollTop =
       messagesContainerRef.current.scrollHeight;
@@ -203,9 +201,10 @@ const ChatBotInterface = () => {
           {messages?.map((message, index) => (
             <div key={index} className="chat-message">
               <ImageCard
-                imageLinks={message.imageLinks}
+                items={message.items}
                 message={message.message}
                 user={message.user}
+                productNames={message.productNames}
               />
             </div>
           ))}
@@ -222,7 +221,7 @@ const ChatBotInterface = () => {
               onKeyDown={handleKeyDown}
             />
           </Form.Group>
-          <Button className="chat-form-button" onClick={handleSubmit}>
+          <Button className="chat-form-button" onClick={submitQuery}>
             <SendIcon />
           </Button>
         </Form>

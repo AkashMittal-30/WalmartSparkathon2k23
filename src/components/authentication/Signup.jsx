@@ -8,6 +8,7 @@ const Signup = () => {
   console.log("signup");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [firstName, setFirstName] = useState("");
   const [password, setPassword] = useState("");
   const { signUp } = useUserAuth();
   let navigate = useNavigate();
@@ -16,7 +17,7 @@ const Signup = () => {
     e.preventDefault();
     setError("");
     try {
-      await signUp(email, password);
+      await signUp(firstName, email, password);
       navigate("/");
     } catch (err) {
       setError(err.message);
@@ -27,8 +28,22 @@ const Signup = () => {
     <div className="auth-body">
       <div className="p-4 box bg-white br-top">
         <h2 className="mb-3">Sign Up</h2>
+
         {error && <Alert variant="danger">{error}</Alert>}
+
         <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Control
+              type="name"
+              placeholder="First Name"
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Control type="name" placeholder="Last Name" />
+          </Form.Group>
+
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control
               type="email"
@@ -52,6 +67,7 @@ const Signup = () => {
           </div>
         </Form>
       </div>
+
       <div className="p-4 text-center bg-white br-bottom">
         Already have an account? <Link to="/login">Login</Link>
       </div>

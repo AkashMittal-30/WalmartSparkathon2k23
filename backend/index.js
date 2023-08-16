@@ -24,15 +24,33 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  firstName:{
+    type: String,
+    required: true,
+  },
+  uid:{
+    type: String,
+    required: true,
+    unique: true,
+  },
   messageWindows: [
     {
       messages: [
         {
-          imageLinks: [String],
+          items: [
+            {
+              imageLink: String,
+              redirectUrl: String,
+              price: String,
+              title: String
+            }
+          ],
+          productNames: [String],
           message: String,
           user: String,
         },
       ],
+      sessionId: String
     },
   ],
 });
@@ -45,14 +63,17 @@ app.get("/", (req, resp) => {
 // Handle signup route
 app.post("/signup", async (req, res) => {
   console.log(req.body);
-  const { email, password } = req.body;
+  const   messageWindows
+    =[];
+  const { firstName, email, password, uid } = req.body;
   try {
-    const newUser = new User({ email, password });
+    const newUser = new User({ email, password, firstName, uid, messageWindows});
     await newUser.save();
     res
       .status(201)
       .json({ message: "User registered successfully", user: newUser });
   } catch (err) {
+    console.log(err)
     res.status(500).json({ error: "Error registering user" });
   }
 });

@@ -1,5 +1,5 @@
 .image-card-container {
-  width: 80%;
+  width: 100%;
   display: flex;
   overflow-x: auto;
   margin-bottom: 6px;
@@ -69,13 +69,13 @@
   font-size: 12px;
 }
 .chat-message-text {
-  width: 80%;
+  width: 100%;
   word-wrap: break-word !important;
-  padding: 20px 10px;
+  padding: 15px 0px;
 }
 .right-align {
   text-align: right;
-  margin-left: 20%;
+  /* margin-left: 20%; */
 }
 .display-none {
   display: none;
@@ -89,6 +89,21 @@ a {
 }
 .bg-l {
   /* border-radius: 5px; */
+}
+/* .product-names-container{
+} */
+.product-names-button{
+  background-color: rgba(114, 187, 255, 0.66);
+  /* word-wrap: break-word !important; */
+  border: none!important;
+  color: black;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 0px 5px 5px 0;
+}
+.product-names-button:hover{
+  background-color: rgb(0, 93, 180);
+  color: white;
 }
 @media screen and (max-width: 600px) {
   .image-card-image {

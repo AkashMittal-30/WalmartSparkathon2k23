@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
@@ -22,12 +22,14 @@ const Login = () => {
       setError(err.message);
     }
   };
-  
+
   return (
     <div className="auth-body">
       <div className="p-4 box bg-white br-top">
         <h2 className="mb-3">Login</h2>
+
         {error && <Alert variant="danger">{error}</Alert>}
+
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control
@@ -52,6 +54,7 @@ const Login = () => {
           </div>
         </Form>
       </div>
+
       <div className="p-4 text-center bg-white br-bottom">
         Don't have an account? <Link to="/signup">Sign Up</Link>
       </div>

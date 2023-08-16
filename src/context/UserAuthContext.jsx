@@ -1,20 +1,9 @@
 import axios from "axios";
-import { createContext, useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {v4 as uuid} from "uuid";
+import { createContext, useContext, useState } from "react";
 const userAuthContext = createContext();
 export function UserAuthContextProvider({ children }) {
   const [user, setUser] = useState();
-  // const navigate = useNavigate();
-  // async function loginCheck(){
-  //   if(localStorage.getItem("email")&&localStorage.getItem("password"))
-  //   {
-  //     await logIn(localStorage.getItem("email"),localStorage.getItem("password"));
-  //     return true;
-  //   }
-  //   return false;
-  // }
-  // if(loginCheck()) navigate("/");
-  // else navigate("/login");
   async function logIn(email, password) {
     const response = await axios.post("http://localhost:5000/login", {
       email,
@@ -22,18 +11,17 @@ export function UserAuthContextProvider({ children }) {
     });
     const userData = response.data.user;
     setUser(userData);
-    // localStorage.setItem("email",email);
-    // localStorage.setItem("password",password);
   }
-  async function signUp(email, password) {
+  async function signUp(firstName,email, password) {
+    const uid=uuid();
     const response = await axios.post("http://localhost:5000/signup", {
+      firstName,
       email,
       password,
+      uid,
     });
     const userData = response.data.user;
     setUser(userData);
-    // localStorage.setItem("email",email);
-    // localStorage.setItem("password",password);
   }
   console.log("userContext");
   function logOut() {
@@ -41,7 +29,6 @@ export function UserAuthContextProvider({ children }) {
     localStorage.removeItem("email");
     localStorage.removeItem("password");
   }
-  
   return (
     <userAuthContext.Provider value={{ user, setUser, logIn, signUp, logOut }}>
       {children}
