@@ -1,0 +1,69 @@
+{
+  "bread": [
+    "https://www.walmart.com/ip/Wonder-Bread-Classic-White-Sandwich-Bread-Sliced-White-Bread-Loaf-20-oz/37858875",
+    "https://www.walmart.com/ip/Nature-s-Own-Butterbread-White-Bread-Loaf-20-oz/10450012",
+    "https://www.walmart.com/ip/Nature-s-Own-Honey-Wheat-Sandwich-Bread-Loaf-20-oz/10450000",
+    "https://www.walmart.com/ip/Wonder-Bread-Classic-Hot-Dog-Buns-White-Bread-Hot-Dog-Buns-8-Count/1234271857"
+  ],
+  "hummus": [
+    "https://www.walmart.com/ip/Sabra-Snackers-Classic-Roasted-Hummus-with-Pretzels-Fresh-4-56-oz-Plastic-Cup/48714443",
+    "https://www.walmart.com/ip/Sabra-Snackers-Roasted-Red-Pepper-Hummus-with-Pretzels-Fresh-4-56-oz-Plastic-Cup/10850133",
+    "https://www.walmart.com/ip/Taylor-Farms-Roasted-Red-Pepper-Hummus-Snack-Tray/1157259141",
+    "https://www.walmart.com/ip/Marketside-Gluten-Free-Classic-Hummus-10-oz-Resealable-Plastic-Container-Ready-to-Eat-Cooked/128642379"
+  ],
+
+  "olives": [
+    "https://www.walmart.com/ip/Lindsay-Pimiento-Stuffed-Manzanilla-Olives-21-oz/10308836",
+    "https://www.walmart.com/ip/Lindsay-Medium-Pitted-Black-Ripe-Olives-6-oz/10308825",
+    "https://www.walmart.com/ip/Great-Value-Medium-Pitted-Black-Olives-6-oz/10315443",
+    "https://www.walmart.com/ip/Great-Value-Sliced-Black-Olives-2-25-oz/10315447"
+  ],
+  "lettuce": [
+    "https://www.walmart.com/ip/Fresh-Iceberg-Lettuce-Each/10402650",
+    "https://www.walmart.com/ip/Marketside-Fresh-Shredded-Iceberg-Lettuce-8-oz-Bag-Fresh/13893731",
+    "https://www.walmart.com/ip/Fresh-Romaine-Lettuce-Hearts-3-Count-Each/10532755?athbdg=L1600",
+    "https://www.walmart.com/ip/Fresh-Green-Leaf-Lettuce-Each/51259368"
+  ],
+  "tomato": [
+    "https://www.walmart.com/ip/Fresh-Slicing-Tomato-Each/44390971",
+    "https://www.walmart.com/ip/Fresh-Cherubs-Grape-Tomatoes-10-oz-Package/1918496773",
+    "https://www.walmart.com/ip/Fresh-Organic-Grape-Tomato-1-lb-Package/2837271344",
+    "https://www.walmart.com/ip/Fresh-Tomato-on-the-Vine-Bag-1-9-lbs-Bag-Est/44390955"
+  ],
+  "oninon": [
+    "https://www.walmart.com/ip/Yellow-Onions-Whole-Fresh-Each/51259212",
+    "https://www.walmart.com/ip/White-Onions-Whole-Fresh-Each/51259208",
+    "https://www.walmart.com/ip/White-Onions-Whole-Fresh-3-lb-Bag/172435859",
+    "https://www.walmart.com/ip/Red-Onions-Whole-Fresh-Each/51259215"
+  ],
+  "cucumber": [
+    "https://www.walmart.com/ip/Fresh-Mini-Cucumbers-16-oz/44419690",
+    "https://www.walmart.com/ip/Cucumber-Salad-pickling/188792682",
+    "https://www.walmart.com/ip/Fresh-Organic-Mini-Cucumbers-1-Pound-Bag/704747922",
+    "https://www.walmart.com/ip/Organic-Cucumber-Each/44419692"
+  ],
+  "cheese": [
+    "https://www.walmart.com/ip/Great-Value-Singles-American-Pasteurized-Prepared-Cheese-Product-16-oz-24-Count/10452423",
+    "https://www.walmart.com/ip/Tillamook-Medium-Cheddar-Cheese-Slices-8-Slices-8-oz/45209541",
+    "https://www.walmart.com/ip/Kraft-Singles-American-Cheese-Slices-24-Ct-Pk/10452905",
+    "https://www.walmart.com/ip/Kraft-Deli-Deluxe-American-Cheese-Slices-24-Ct-Bag/10295522"
+  ],
+  "olive oil": [
+    "https://www.walmart.com/ip/Pompeian-Robust-Extra-Virgin-Olive-Oil-68-fl-oz/10450625",
+    "https://www.walmart.com/ip/Pompeian-Smooth-Extra-Virgin-Olive-Oil-16-fl-oz/176946682",
+    "https://www.walmart.com/ip/Bertolli-Extra-Virgin-Olive-Oil-25-4-fl-oz/10292275",
+    "https://www.walmart.com/ip/Bertolli-Extra-Virgin-Olive-Oil-16-9-fl-oz/10292273"
+  ],
+  "pepper": [
+    "https://www.walmart.com/ip/McCormick-Black-Pepper-Pure-Ground-6-oz-Mixed-Spices-Seasonings/44981962",
+    "https://www.walmart.com/ip/Simply-Organic-GMO-Free-Organic-Ground-Black-Pepper-4-oz/31070282",
+    "https://www.walmart.com/ip/Great-Value-Ground-Black-Pepper-3-oz/44662573",
+    "https://www.walmart.com/ip/McCormick-Black-Pepper-Pure-Ground-6-oz-Mixed-Spices-Seasonings/44981962"
+  ],
+  "salt": [
+    "https://www.walmart.com/ip/Good-Tierra-Himalayan-Pink-Salt-in-Jar-Coarse-2-5-lb/1450026690",
+    "https://www.walmart.com/ip/Herbion-Himalayan-Pink-Salt-5-lb-2-2-Kg-Jar-Fine-Grain-GMO-Free-Supreme-Quality-Chemical-Vegan-Kosher-Certified-All-Natural-Triple-washed-Spring-Wate/976266621",
+    "https://www.walmart.com/ip/Celtic-French-Sea-Salt-100-All-Natural-Imported-Unrefined-Celtic-Salt-Fine-Ground-16oz/2408263706",
+    "https://www.walmart.com/ip/Fasl-Organic-Himalayan-Pink-Salt-Fine-with-Reusable-Salt-Shaker-8-oz/1191485026"
+  ]
+}

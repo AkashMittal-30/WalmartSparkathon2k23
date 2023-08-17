@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+
 // import { useUserAuth } from "../../context/UserAuthContext";
 
 const Signup = () => {
@@ -24,9 +25,23 @@ const Signup = () => {
 
   return (
     <div className="auth-body">
+      <img
+        className="custom-image" // Add your custom class here
+        src="/walbot-logo.png"
+        alt="Custom Image"
+      />
       <div className="p-4 box bg-white br-top">
         <h2 className="mb-3">Sign Up</h2>
         {error && <Alert variant="danger">{error}</Alert>}
+
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Control
+              type="text"
+              placeholder="Name"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Group>
+
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control
@@ -45,13 +60,15 @@ const Signup = () => {
           </Form.Group>
 
           <div className="d-grid gap-2">
-            <Button variant="primary" type="Submit">
+            <Button variant="primary" type="submit" className="custom-button">
               Sign up
             </Button>
+          
           </div>
+
         </Form>
       </div>
-      <div className="p-4 text-center bg-white br-bottom">
+      <div className=" p-2 text-center bg-white br-bottom bottom-pad">
         Already have an account? <Link to="/login">Login</Link>
       </div>
     </div>

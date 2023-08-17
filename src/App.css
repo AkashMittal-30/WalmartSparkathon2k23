@@ -20,3 +20,31 @@
 {
   border-radius: 0 0 12px 12px;
 }
+.custom-image {
+  max-width: 480px;
+  margin-bottom: 50px;
+}
+
+.bottom-pad-login{
+  padding-top:0px!important;
+}
+
+.bottom-pad{
+  padding-bottom: 20px!important;
+}
+.custom-google-button{
+  /* border-radius: 10px!important; */
+  width: 100%!important;
+}
+
+.buttonLogo{
+height: 100px;
+width: 100px;
+}
+
+@media (max-width: 550px) {
+  .custom-image {
+    width: 320px; 
+    margin-bottom: 30px; 
+  }
+}

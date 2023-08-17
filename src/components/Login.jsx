@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-// import GoogleButton from "react-google-button";
+import GoogleButton from "react-google-button";
 // import { useUserAuth } from "../../context/UserAuthContext";
 
 const Login = () => {
@@ -35,10 +35,16 @@ const Login = () => {
 
   return (
     <div className="auth-body">
+       <img
+        className="custom-image" // Add your custom class here
+        src="/walbot-logo.png"
+        alt="Custom Image"
+      />
       <div className="p-4 box bg-white br-top">
         <h2 className="mb-3">Login</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
+
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control
               type="email"
@@ -59,10 +65,17 @@ const Login = () => {
             <Button variant="primary" type="Submit">
               Log In
             </Button>
+            <GoogleButton
+              // variant="light"
+              type="submit"
+              className="custom-google-button"
+            >
+              Sign  in  with  Google  
+            </GoogleButton>
           </div>
         </Form>
       </div>
-      <div className="p-4 text-center bg-white br-bottom">
+      <div className="p-4 text-center bg-white br-bottom bottom-pad-login">
         Don't have an account? <Link to="/signup">Sign Up</Link>
       </div>
     </div>
