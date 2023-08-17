@@ -90,7 +90,7 @@ curl -X POST \
 
 ```json
 {
-    "aiUtterance": "Hi Syed! How may I assist you today?"
+    "agentUtterance": "Hi Syed! How may I assist you today?"
 }
 ```
 
@@ -218,3 +218,154 @@ curl -X POST \
     <summary><code>GET</code> <code><b>/compare/product1/{productId1}/product2/{productId2}</b></code> <code>(request an extensive comparison between two products based on description and customer reviews)</code></summary>
 
 </details>
+
+
+
+
+## Sample
+<hr>
+
+```bash
+/seed/user/d88f9792-04c7-4837-bfa0-b00fddd9d903/session/b71fd28b-1dc7-4488-8ec6-bad2cdc13a04
+```
+```json
+{}
+```
+```json
+{
+    "agentUtterance": "Hello! I'm an AI Sales Assistant at WalBot. How may I assist you today?"
+}
+```
+<hr>
+
+```bash
+reply/user/d88f9792-04c7-4837-bfa0-b00fddd9d903/session/b71fd28b-1dc7-4488-8ec6-bad2cdc13a04
+```
+```json
+{
+    "userUtterance": "I am going camping to alaska this summer. what things should i buy"
+}
+```
+```json
+{
+    "agentUtterance": "That sounds like a great adventure! When going camping in Alaska, it's important to be prepared for the outdoors and varying weather conditions. Here are a few essentials you should consider buying:\n\n1. Tent: Look for a sturdy and waterproof tent that can withstand the elements.\n2. Sleeping bag: Choose one that provides enough insulation for colder temperatures.\n3. Camping stove: A portable stove will allow you to cook meals during your trip.\n4. Warm clothing: Pack layers, including thermal underwear, fleece jackets, and waterproof outerwear.\n5. Hiking boots: Invest in comfortable and durable footwear for hiking and exploring.\n6. Camping mattress or sleeping pad: This will provide insulation and comfort while sleeping.\n7. Cooking utensils: Bring lightweight and versatile cookware, such as a pot, pan, and utensils.\n8. First aid kit: It's always important to have a well-stocked first aid kit for any emergencies.\n9. Insect repellent: Alaska can have mosquitoes and other bugs, so bring effective repellent.\n10. Camping accessories: Don't forget items like a headlamp, multitool, and camping chairs.\n\nThese are just a few suggestions to get you started. Is there anything else you would like assistance with? Are you satisfied with this information? ",
+    "productSearchNames": [
+        "Tent",
+        "Sleeping bag",
+        "Camping stove",
+        "Warm clothing",
+        "Hiking boots",
+        "Camping mattress or sleeping pad",
+        "Cooking utensils",
+        "First aid kit",
+        "Insect repellent",
+        "Camping accessories"
+    ]
+}
+```
+<hr>
+
+```bash
+/search
+```
+
+```json
+{
+    "searchName": "Warm sleeping bag"
+}
+```
+
+```json
+{
+    "productsList": [
+        {
+            "id": "29GIGERK890H",
+            "type": "Sleeping Bags",
+            "name": "Ozark Trail 50-Degree Warm Weather Red Sleeping Bag, 33\"x75\"",
+            "brand": "Ozark Trail",
+            "price": 19.97,
+            "currency": null,
+            "rating": 4.3543,
+            "imageUrl": "https://i5.walmartimages.com/seo/Ozark-Trail-50-Degree-Warm-Weather-Red-Sleeping-Bag-33-x75_6f806fba-dd99-455f-8f6d-80c8ceed7c5f.e00124790dfc8b9894d77e0cc79f73cf.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/Ozark-Trail-50-Degree-Warm-Weather-Red-Sleeping-Bag-33-x75/477760657"
+        },
+        {
+            "id": "0V0W5U6NDCML",
+            "type": "Sleeping Bags",
+            "name": "Ozark Trail 35-Degree Cool Weather Recycled Adult Sleeping Bag, Blue, 33\"x77\"",
+            "brand": "Ozark Trail",
+            "price": 24.97,
+            "currency": null,
+            "rating": 4.2655,
+            "imageUrl": "https://i5.walmartimages.com/seo/Ozark-Trail-35-Degree-Cool-Weather-Recycled-Adult-Sleeping-Bag-Blue-33-x77_22110045-314e-4760-aa71-884b58bdf966.8b3fddafe38033531b0e23b056d8af62.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/Ozark-Trail-35-Degree-Cool-Weather-Recycled-Adult-Sleeping-Bag-Blue-33-x77/446606039"
+        },
+        {
+            "id": "7HIVSSDY5NE0",
+            "type": "Sleeping Bags",
+            "name": "Ozark Trail Oversized 30-Degree Cool Weather Sleeping Bag, Gray, 40\"x80\"",
+            "brand": "Ozark Trail",
+            "price": 29.98,
+            "currency": null,
+            "rating": 4.4505,
+            "imageUrl": "https://i5.walmartimages.com/seo/Ozark-Trail-Oversized-30-Degree-Cool-Weather-Sleeping-Bag-Gray-40-x80_e6a5bc05-c129-4f75-9ec7-5ff5d90cb4a8.424657a60606c94ab2f79806ad500c7c.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/Ozark-Trail-Oversized-30-Degree-Cool-Weather-Sleeping-Bag-Gray-40-x80/677794987"
+        },
+        {
+            "id": "5AI9KMTJZO21",
+            "type": "Sleeping Bags",
+            "name": "CRCKT Kids Rectangular Sleeping Bag,  °50F Rating, Multi-Color Unicorn Print",
+            "brand": "CRCKT",
+            "price": 22.97,
+            "currency": null,
+            "rating": 4.6881,
+            "imageUrl": "https://i5.walmartimages.com/seo/CRCKT-Kids-Rectangular-Sleeping-Bag-50F-Rating-Multi-Color-Unicorn-Print_2880f2ec-ecf3-4e00-adee-3031f8dae545_2.b1e6011b8972694c30307841b726e6bc.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/CRCKT-Kids-Rectangular-Sleeping-Bag-50F-Rating-Multi-Color-Unicorn-Print/360653231"
+        },
+        {
+            "id": "7441G2VC7RHF",
+            "type": "Sleeping Bags",
+            "name": "Firefly! Outdoor Gear Finn the Shark Kid's Sleeping Bag - Navy/Gray (65 in. x 24 in.)",
+            "brand": "Firefly! Outdoor Gear",
+            "price": 24.97,
+            "currency": null,
+            "rating": 4.7732,
+            "imageUrl": "https://i5.walmartimages.com/seo/Firefly-Outdoor-Gear-Finn-the-Shark-Kid-s-Sleeping-Bag-Navy-Gray-65-in-x-24-in_33e24ac5-6d01-4391-b553-f68b07014ec0.1bcf471a4f9d361bb3bf6b1eb6405e11.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/Firefly-Outdoor-Gear-Finn-the-Shark-Kid-s-Sleeping-Bag-Navy-Gray-65-in-x-24-in/350448918"
+        },
+        {
+            "id": "3J9RH7ES1P2F",
+            "type": "Sleeping Bags",
+            "name": "Firefly! Outdoor Gear Sparkle the Unicorn Kid's Sleeping Bag - Pink (65 in. x 24 in.)",
+            "brand": "Firefly! Outdoor Gear",
+            "price": 24.97,
+            "currency": null,
+            "rating": 4.5238,
+            "imageUrl": "https://i5.walmartimages.com/seo/Firefly-Outdoor-Gear-Sparkle-the-Unicorn-Kid-s-Sleeping-Bag-Pink-65-in-x-24-in_a8b09e5c-ccca-40ff-b32b-8daef0d1d2c3.4ad513cb7094167d7d65a8242cc5c02a.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/Firefly-Outdoor-Gear-Sparkle-the-Unicorn-Kid-s-Sleeping-Bag-Pink-65-in-x-24-in/454046543"
+        },
+        {
+            "id": "39Z8UU5FNHT2",
+            "type": "Sleeping Bags",
+            "name": "MOONCAST 0 ºC Sleeping Bags, Compression Sack Portable and Lightweight for Camping, Dark Gray",
+            "brand": "MOONCAST",
+            "price": 34.49,
+            "currency": "USD",
+            "rating": 4.3729,
+            "imageUrl": "https://i5.walmartimages.com/seo/MOONCAST-0-C-Sleeping-Bags-Compression-Sack-Portable-and-Lightweight-for-Camping-Dark-Gray_35ff97c6-f83a-4ee6-8c5b-fa226db36699.f5f07161195c9aa8f69a63277436a45a.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/MOONCAST-0-C-Sleeping-Bags-Compression-Sack-Portable-and-Lightweight-for-Camping-Dark-Gray/509217074"
+        },
+        {
+            "id": "16V8VOTJ31IU",
+            "type": "Sleeping Bags",
+            "name": "Slumberjack Elk Creek 45-Degree Insulated Adult Indoor/Outdoor Sleeping Bags Blanket Quilt, Indigo, 60\" L x 70\" W",
+            "brand": "Slumberjack",
+            "price": 29.94,
+            "currency": null,
+            "rating": 4.5357,
+            "imageUrl": "https://i5.walmartimages.com/seo/Slumberjack-Elk-Creek-45-Degree-Insulated-Adult-Indoor-Outdoor-Sleeping-Bags-Blanket-Quilt-Indigo-60-L-x-70-W_21310ac2-7081-48eb-8ae9-f0d3ce05d0a0.a7f62b3b3b1c2f41b147a2d801ad6388.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/Slumberjack-Elk-Creek-45-Degree-Insulated-Adult-Indoor-Outdoor-Sleeping-Bags-Blanket-Quilt-Indigo-60-L-x-70-W/946848902"
+        }
+    ]
+}
+```
