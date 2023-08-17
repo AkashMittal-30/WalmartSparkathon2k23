@@ -369,3 +369,131 @@ reply/user/d88f9792-04c7-4837-bfa0-b00fddd9d903/session/b71fd28b-1dc7-4488-8ec6-
     ]
 }
 ```
+
+<hr>
+
+```bash
+reply/user/d88f9792-04c7-4837-bfa0-b00fddd9d903/session/b71fd28b-1dc7-4488-8ec6-bad2cdc13a04
+```
+```json
+{
+    "userUtterance": "I have heard that bears are quite notorious there. How can I protect myself from getting attacked"
+}
+```
+```json
+{
+    "agentUtterance": "When camping in bear country, it's important to take precautions to protect yourself from potential bear encounters. Here are a few tips to keep in mind:\n1. Store your food properly: Bears are attracted to the smell of food, so it's crucial to store your food in a bear-resistant container or hang it from a tree branch at least 10 feet off the ground and 4 feet away from the trunk.\n2. Use bear spray: Carry bear spray with you at all times and know how to use it. Bear spray is a non-lethal deterrent that can help deter a bear if it gets too close.\n3. Make noise: Bears are more likely to avoid humans if they are aware of your presence. Make noise while hiking, such as talking loudly or clapping your hands, to alert bears of your presence.\n4. Camp in open areas: Avoid camping in dense vegetation, as it can make it harder to see and hear bears approaching your campsite.\n5. Keep a clean camp: Clean up all food scraps and trash, as they can attract bears. Dispose of them properly in designated bear-proof containers or by packing them out.\nRemember, while these precautions can help minimize the risk of bear encounters, it's important to be aware of your surroundings and follow any additional safety guidelines provided by local authorities. Have a great camping trip! Is there anything else I can assist you with? <END_OF_TURN>",
+    "productSearchNames": [
+        "Bear-resistant container or bear bag",
+        "Bear spray",
+        "Whistle",
+        "Food storage containers",
+        "Trash bags"
+    ]
+}
+```
+<hr>
+
+```bash
+/search
+```
+
+```json
+{
+    "searchName": "Bear spray"
+}
+```
+```json
+{
+    "productItemsList": [
+        {
+            "id": "6NE4PGW1TXGJ",
+            "type": "Bear Protection",
+            "name": "Frontiersman Bear Attack Deterrent Spray 30 Feet - FBAD-03",
+            "brand": "SABRE",
+            "price": 34.43,
+            "currency": "USD",
+            "rating": 4.5,
+            "imageUrl": "https://i5.walmartimages.com/seo/Frontiersman-Bear-Attack-Deterrent-Spray-30-Feet-FBAD-03_c9087f11-a453-49cd-a502-7248157ff13d.ba475c300be1cdb89bf57010a1d7843b.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/Frontiersman-Bear-Attack-Deterrent-Spray-30-Feet-FBAD-03/20629529"
+        },
+        {
+            "id": "1HRMBAJU3K6P",
+            "type": "Bear Protection",
+            "name": "SABRE Frontiersman 7.9 oz. Bear Spray Deterrent with Belt Holster",
+            "brand": "Frontiersman",
+            "price": 42.69,
+            "currency": null,
+            "rating": 4.6477,
+            "imageUrl": "https://i5.walmartimages.com/seo/SABRE-Frontiersman-7-9-oz-Bear-Spray-Deterrent-with-Belt-Holster_020a00aa-ae70-44c1-820c-6f06f9bb0a5c.df765dc1b21d1c650410e23b9fe091dc.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/SABRE-Frontiersman-7-9-oz-Bear-Spray-Deterrent-with-Belt-Holster/20629530"
+        },
+        {
+            "id": "33F19AZR91KY",
+            "type": "Bear Protection",
+            "name": "Mace Brand Bear Pepper Mace - Green",
+            "brand": "Mace",
+            "price": 30.62,
+            "currency": null,
+            "rating": 4.32,
+            "imageUrl": "https://i5.walmartimages.com/seo/Mace-Brand-Bear-Pepper-Mace-Green_65fcc0f3-e6bc-45e4-a9ff-50fb31718da0.116681ab7da1263fadef91328db831c1.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/Mace-Brand-Bear-Pepper-Mace-Green/34722055"
+        },
+        {
+            "id": "511J2O9847M9",
+            "type": "Bear Protection",
+            "name": "Coghlan's Silver Bear Bell with Magnetic Silencer",
+            "brand": "Coghlan's",
+            "price": 5.5,
+            "currency": null,
+            "rating": 4.7778,
+            "imageUrl": "https://i5.walmartimages.com/seo/Coghlan-s-Silver-Bear-Bell-with-Magnetic-Silencer_e1d19bd4-4fb2-4315-82c7-c079ca0f3848_1.144477718cd507c9b80f1eaa3bfcea1c.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/Coghlan-s-Silver-Bear-Bell-with-Magnetic-Silencer/35703554"
+        },
+        {
+            "id": "2EBWGAGPXIPT",
+            "type": "Bear Protection",
+            "name": "SABRE Frontiersman 9.2 oz Bear Spray with Belt Holster, White",
+            "brand": "SABRE",
+            "price": 44.99,
+            "currency": null,
+            "rating": 4.5077,
+            "imageUrl": "https://i5.walmartimages.com/seo/SABRE-Frontiersman-9-2-oz-Bear-Spray-with-Belt-Holster-White_4c7f2117-0175-4e5f-94a5-0536449e5873.7d0600cacf2f4e66f90a01fbd11b6b95.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/SABRE-Frontiersman-9-2-oz-Bear-Spray-with-Belt-Holster-White/21684332"
+        },
+        {
+            "id": "1UU1I42V2NVL",
+            "type": "Bear Protection",
+            "name": "SABRE Frontiersman 9.2 Ounce Bear Spray Deterrent, 35-Foot Range",
+            "brand": "SABRE",
+            "price": 42.22,
+            "currency": null,
+            "rating": 4.3636,
+            "imageUrl": "https://i5.walmartimages.com/seo/SABRE-Frontiersman-9-2-Ounce-Bear-Spray-Deterrent-35-Foot-Range_4bb9e481-7d63-4993-8d2b-0af8e4314cb3.45356f9931abd62ad62c2b6405409108.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/SABRE-Frontiersman-9-2-Ounce-Bear-Spray-Deterrent-35-Foot-Range/27375817"
+        },
+        {
+            "id": "0UZGJZ8JVTUH",
+            "type": "Bear Protection",
+            "name": "Alaska Bear Spray Sabre Ak Backpcker W/hlr  9.2 Oz   92bh",
+            "brand": "Alaska Backpacker",
+            "price": 46.97,
+            "currency": null,
+            "rating": null,
+            "imageUrl": "https://i5.walmartimages.com/seo/Alaska-Bear-Spray-Sabre-Ak-Backpcker-W-hlr-9-2-Oz-92bh_628b8394-f872-4164-b5ac-ed0fef558d24_1.5b254292a3be1e4b6a03103a62fc36df.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/Alaska-Bear-Spray-Sabre-Ak-Backpcker-W-hlr-9-2-Oz-92bh/196570796"
+        },
+        {
+            "id": "27GWHLDJUXBP",
+            "type": "Pepper Spray",
+            "name": "UDAP Pepper Power Bear Pepper Spray Deterrent with Holster, 7.9 oz, 2 Pack, SO2",
+            "brand": "Pepper Power",
+            "price": 59.99,
+            "currency": null,
+            "rating": 5,
+            "imageUrl": "https://i5.walmartimages.com/seo/UDAP-Pepper-Power-Bear-Pepper-Spray-Deterrent-with-Holster-7-9-oz-2-Pack-SO2_2bc3d5a3-2703-4f0b-b2f2-78f78b676b4b.65b4214a90546b1611e7ff8529cfe1c0.jpeg",
+            "pageUrl": "https://www.walmart.com/ip/UDAP-Pepper-Power-Bear-Pepper-Spray-Deterrent-with-Holster-7-9-oz-2-Pack-SO2/939220703"
+        }
+    ]
+}
+```
