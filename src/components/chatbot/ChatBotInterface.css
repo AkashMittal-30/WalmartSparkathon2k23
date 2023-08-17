@@ -1,11 +1,24 @@
 .chatBotInterface {
   display: flex;
 }
+.drawer-heading-walmart{
+  display: inline-block;
+  margin-right: 50px;
+}
 .drawer {
   width: 240px;
   flex-shrink: 0;
   white-space: nowrap;
   transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+  overflow:hidden!important;
+}
+.chat-text-center{
+  text-align: center;
+  margin-top: 20px;
+}
+.chat-note-text{
+  font-size: smaller;
+  margin-top: 10px;
 }
 .drawer-chat-windows {
   height: 100%;
@@ -29,6 +42,7 @@
   background-color: rgb(0, 112, 220) !important;
   color: white !important;
   width: 240px;
+  overflow:hidden!important;
 }
 .color-white {
   color: white !important;

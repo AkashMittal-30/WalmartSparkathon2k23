@@ -20,40 +20,43 @@ const ChatBotInterface = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true); // To manage sidebar status
   const [isOldChatWindow, setIsOldChatWindow] = useState(-1);
   const [messages, setMessages] = useState([]);
-  const [messageWindows, setMessageWindows] = useState(user.messageWindows); 
+  const [messageWindows, setMessageWindows] = useState(user.messageWindows);
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
-  const saveNewMessageWindow =()=>{
+  const saveNewMessageWindow = () => {
     const newMessageWindow = {
       messages: messages,
     };
     const newMessageWindows = [newMessageWindow, ...messageWindows];
     setMessageWindows(newMessageWindows);
-  }
-  const saveOldMessageWindow =()=>{
+  };
+  const saveOldMessageWindow = () => {
     const newMessageWindow = {
       messages: messages,
     };
     const newMessageWindows = messageWindows;
     newMessageWindows[isOldChatWindow] = newMessageWindow;
     setMessageWindows(newMessageWindows);
-  }
+  };
 
-  const submitQuery = (e) => { // To submit user
+  const submitQuery = (e) => {
+    // To submit user
     e.preventDefault();
     if (queryText.current.value !== "") {
       const newMessage = {
-        items: [{
-          imageLink: "https://picsum.photos/200",
-          redirectUrl: "https://picsum.photos/200",
-          price: "1000",
-          title: "raja bc"
-        }],
+        items: [
+          {
+            imageLink: "https://picsum.photos/200",
+            redirectUrl: "https://picsum.photos/200",
+            price: "1000",
+            title: "raja bc",
+          },
+        ],
         message: queryText.current.value,
         user: user.email,
-        productNames: ["Barbie","Hannah"]
+        productNames: ["Barbie", "Hannah"],
       };
       const newMessages = [...messages, newMessage];
       setMessages(newMessages);
@@ -127,7 +130,7 @@ const ChatBotInterface = () => {
     }
     setIsOldChatWindow(ind);
   };
-  
+
   useEffect(() => {
     messagesContainerRef.current.scrollTop =
       messagesContainerRef.current.scrollHeight;
@@ -198,6 +201,16 @@ const ChatBotInterface = () => {
       </Drawer>
       <div className={`content ${sidebarOpen ? "slightBlur" : ""}`}>
         <div className="chat-messages" ref={messagesContainerRef}>
+          <div
+            className={`${messages.length === 0 ? "chat-text-center" : "hide"}`}
+          >
+            <b>Hi! {user.firstName} How can I help you today?</b>
+            <br />
+            <p className="chat-note-text">
+              Note: You can start the conversation with bot by typing your
+              message in the below message box!!!
+            </p>
+          </div>
           {messages?.map((message, index) => (
             <div key={index} className="chat-message">
               <ImageCard

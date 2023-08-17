@@ -6,6 +6,7 @@
 }
 .message-container {
   position: relative;
+  border-radius: 8px;
 }
 .image-card-container::-webkit-scrollbar {
   height: 6px;
@@ -63,10 +64,13 @@
   color: white;
 }
 .image-card-title {
-  font-size: 20px;
+  font-size: 16px;
 }
 .image-card-price {
   font-size: 12px;
+}
+.image-card-rating{
+  font-size: 14px;
 }
 .chat-message-text {
   width: 100%;
@@ -75,6 +79,7 @@
 }
 .right-align {
   text-align: right;
+  padding-right: 20px;
   /* margin-left: 20%; */
 }
 .display-none {
@@ -94,7 +99,7 @@ a {
 } */
 .product-names-button{
   background-color: rgba(114, 187, 255, 0.66);
-  /* word-wrap: break-word !important; */
+  /* word-wrap: break-word !important;f */
   border: none!important;
   color: black;
   padding: 8px;
@@ -105,6 +110,35 @@ a {
   background-color: rgb(0, 93, 180);
   color: white;
 }
+
+
+
+/* .half-filled-star {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  color: yellow;
+}
+
+.half-filled-star:before {
+  content: '\2605'; /* Unicode character for a star */
+  /* position: absolute;
+  width: 50%;
+  overflow: hidden;
+  color: white; */
+/* } */ 
+
+.half-filled-star {
+  position: relative;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  /* size: smaller; */
+  background: linear-gradient(90deg, yellow 50%, white 50%);
+}
+
+
 @media screen and (max-width: 600px) {
   .image-card-image {
     width: 100px;
@@ -113,7 +147,7 @@ a {
     margin-bottom: 6px;
   }
   .image-card-title {
-    font-size: 16px;
+    font-size: 14px;
   }
   .image-card-price {
     font-size: 10px;

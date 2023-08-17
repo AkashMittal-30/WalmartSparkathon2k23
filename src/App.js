@@ -17,7 +17,6 @@ function App() {
           path="/"
           element={
             <ProtectedRoute>
-              {/* <ChatBotInterface /> */}
               <ChatBotInterface2/>
             </ProtectedRoute>
           }

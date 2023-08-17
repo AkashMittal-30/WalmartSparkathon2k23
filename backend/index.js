@@ -1,9 +1,30 @@
+const pkg= require("body-parser") ;
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const {urlencoded, json}=pkg;
 const app = express();
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
+app.use(cors());
+app.use(urlencoded({
+  extended:true,
+}))
+app.use((req, res, next) => {
+  // res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
+})
+
+
+
+// app.use(
+//   urlencoded({
+//     extendend:true,
+//   })
+// );
 // Connect to MongoDB
 mongoose
   .connect("mongodb://localhost:27017/sparkathon", {
@@ -59,8 +80,10 @@ const User = mongoose.model("user", userSchema);
 
 app.get("/", (req, resp) => {
   resp.send("App is Working");
+
 });
-// Handle signup route
+// Handle signup routea
+
 app.post("/signup", async (req, res) => {
   console.log(req.body);
   const   messageWindows
