@@ -497,3 +497,18 @@ reply/user/d88f9792-04c7-4837-bfa0-b00fddd9d903/session/b71fd28b-1dc7-4488-8ec6-
     ]
 }
 ```
+<hr>
+
+```bash
+/ask/product/6NE4PGW1TXGJ
+```
+```json
+{
+    "userUtterance": "how far can this spray?"
+}
+```
+```json
+{
+    "agentUtterance": "The Frontiersman Bear Attack Deterrent Spray has a maximum spray range of 30 feet (9 meters). This means you can deploy the spray from a distance of up to 30 feet to create a protective barrier between you and an aggressive bear. This range is designed to provide you with more time to react to a charging bear and to help keep you safe during outdoor adventures."
+}
+```
