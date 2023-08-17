@@ -2,11 +2,11 @@ from pydantic import BaseModel
 
 
 class User(BaseModel):
-    first_name: str
+    firstName: str = "John"
+    temperature: int = 0.7
 
 class Chat(BaseModel):
-    user_utterance: str
-    temperature: int = 0.5
+    userUtterance: str
 
 class Product(BaseModel):
-    product_name: str
+    searchName: str
